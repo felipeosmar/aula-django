@@ -1,4 +1,7 @@
-# aula-django
+# Oficina django
+## Pyenv + Virtualenv + Poetry + Django
+
+O Objetivo deste repositorio é guia-lo na criação de um projeto Django do zero, usando genciador de projetos Poetry, gerenciamento de versões de Python com Pyenv, gerenciamento de versões de bibliotecas com o Virtualenv, e por fim criar uma aplicação web com Django.
 
 ## Criar repositorio no github
 
@@ -115,11 +118,23 @@ poetry run django-admin startproject config .
 
 1. Configurar o banco no ``settings.py``
 1. Rodar as migrações iniciais:
-``poetry run python manage.py migrate``
+```
+poetry run python manage.py migrate
+```
 
 1. Executando o Servidor Django
-``poetry run python manage.py runserver`` <br>
+```
+poetry run python manage.py runserver
+```
+
 Acessar http://127.0.0.1:8000/ e verificar se está funcionando
+
+1. Criar o primeiro superusuario
+```
+poetry run python manage.py createsuperuser
+```
+
+responder as perguntas sobre o usuario.
 
 ## Criando um Aplicativo Django
 1. Criar um novo app chamado core:
@@ -130,7 +145,4 @@ poetry run python manage.py startapp core
 
 1. Registrar o app no INSTALLED_APPS
 1. Criar uma view simples e configurar no urls.py
-
-
-
 
