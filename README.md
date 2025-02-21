@@ -90,7 +90,7 @@ export PATH="$HOME/.local/bin:$PATH"
 ```
 4. Configurar o Poetry para criar a pasta do venv dentro da pasta do projeto
 ```
-poetry config settings.virtualenvs.in-project true
+poetry config virtualenvs.in-project true
 ```
 
 ## Criando um ambiente virtual com Poetry
@@ -111,7 +111,7 @@ poetry add django
 1. Criar um novo projeto Django:<br>
 **atentar para o ponto no final do comando**
 ```
-poetry run django-admin startproject config . 
+poetry run django-admin startproject estacionamento . 
 ```
 
 ## Configuração do Banco de Dados
@@ -137,12 +137,36 @@ poetry run python manage.py createsuperuser
 responder as perguntas sobre o usuario.
 
 ## Criando um Aplicativo Django
-1. Criar um novo app chamado core:
+
+é necessario entrar na pasta do projeto:
+
+```cd estacionamento```
+
+1. Criar um novo app chamado base:
 
 ```
-poetry run python manage.py startapp core
+poetry run python manage.py startapp base
 ```
 
 1. Registrar o app no INSTALLED_APPS
 1. Criar uma view simples e configurar no urls.py
 
+
+# rodar o projeto pela *segunda* vez:
+
+1. Instalar dependencias:<br>
+```
+sudo apt update && sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
+```
+1. Instalar pyenv via scrpit: <br>
+```
+curl https://pyenv.run | bash
+```
+
+1. Adicionar as configurações ao shell:
+```
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+source ~/.bashrc
+```
