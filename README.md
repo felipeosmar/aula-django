@@ -60,8 +60,8 @@ source ~/.bashrc
 ```
 
 1. Verificar as versões disponiveis ``pyenv install --list`` <br>
-para instalar vesão especifica: ``pyenv install 3.11.5`` <br>
-Definir a versão global do Python: ``pyenv install 3.11.5`` <br>
+para instalar vesão especifica: ``pyenv install 3.11`` <br>
+Definir a versão global do Python: ``pyenv global 3.11`` <br>
 
 ## Instalar o Virtualenv
 
